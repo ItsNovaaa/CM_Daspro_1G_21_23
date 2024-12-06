@@ -8,8 +8,8 @@ public class caseMethod {
 		Scanner sc = new Scanner(System.in);
 		int menu, noMeja;
 		String namaPelanggan;
-		String[] Menu = {"Kopi", "Teh", "Es Degan", "Roti Bakar"};
-		int[] harga = {1000, 2000, 3000, 4000};
+		String[] Menu = {"Kopi Hitam", "Latte", "Teh Tarik", "Mie Goreng"};
+		int[] harga = {15000, 22000, 12000, 18000};
 		String []MenuPilihan = new String[4];
 		double []MenuTotalHarga = new double[4];
 
@@ -20,10 +20,10 @@ public class caseMethod {
 			System.out.println("3. Keluar");
 			System.out.print("Pilih menu: ");
 			menu = sc.nextInt();
-			System.out.println("Masukkan nomor meja: ");
+			System.out.print("Masukkan nomor meja: ");
 			noMeja = sc.nextInt();
 			sc.nextLine();
-			System.out.println("Masukkan nama pelanggan: ");
+			System.out.print("Masukkan nama pelanggan: ");
 			namaPelanggan = sc.nextLine();
 			
 			if (menu == 1) {
@@ -53,14 +53,26 @@ public class caseMethod {
 			System.out.println("3. Teh Tarik - Rp 12000");
 			System.out.println("4. Mie Goreng - Rp 18000");
 
-			System.out.println("Pilih Menu: ");
+			System.out.print("Pilih menu (Masukkan no menu, atau 0 untuk selesai): ");
 			int menuKafe = new Scanner(System.in).nextInt();
-			System.out.println("Pilih Menu: ");
+			if (menuKafe == 0) {
+				break;
+			}
+			System.out.print("Masukkan jumlah item untuk " + Menu[menuKafe-1] + ": " );
 			int jumlahMenu = new Scanner(System.in).nextInt();
 
 			if (menuKafe == 1) {
 				MenuPilihan[0] = Menu[menuKafe-1];
 				MenuTotalHarga[0] = 15000;
+			} else if (menuKafe == 2) {
+				MenuPilihan[0] = Menu[menuKafe-1];
+				MenuTotalHarga[0] = 22000;
+			} else if (menuKafe == 3) {
+				MenuPilihan[0] = Menu[menuKafe-1];
+				MenuTotalHarga[0] = 12000;
+			} else if (menuKafe == 4) {
+				MenuPilihan[0] = Menu[menuKafe-1];
+				MenuTotalHarga[0] = 18000;
 			}
 
 			

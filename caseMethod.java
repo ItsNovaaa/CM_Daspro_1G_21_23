@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class caseMethod {
 
-	static void 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int menu, noMeja;
