@@ -75,7 +75,6 @@ public class caseMethod {
 				MenuPilihan[menuKafe-1] = Menu[menuKafe-1];
 				MenuTotalHarga = harga[menuKafe-1] * jumlahMenu;
 				TotalhargaMenu += MenuTotalHarga;
-
 			}
 		}
 	}
