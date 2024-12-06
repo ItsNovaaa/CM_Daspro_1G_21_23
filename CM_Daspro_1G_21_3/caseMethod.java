@@ -28,11 +28,6 @@ public class caseMethod {
 			
 			if (menu == 1) {
 				TambahPesanan(Menu,harga);
-				// System.out.println("===== MENU KAFE =====");
-				// System.out.println("1. Kopi Hitam - Rp 15000");
-				// System.out.println("2. Latte - Rp 22000");
-				// System.out.println("3. Teh Tarik - Rp 12000");
-				// System.out.println("4. Mie Goreng - Rp 18000");
 			} else if (menu == 2) {
 				
 			} else if (menu == 3) {
@@ -44,9 +39,10 @@ public class caseMethod {
 	}
 
 	public static void TambahPesanan(String[] Menu, int[] harga) {
+		double TotalhargaMenu = 0;
+		String []MenuPilihan = new String[4]; 
 		while (true) { 
-			String []MenuPilihan = new String[4]; 
-			double []MenuTotalHarga = new double[4];
+			double MenuTotalHarga = 0;
 			System.out.println("===== MENU KAFE =====");
 			System.out.println("1. Kopi Hitam - Rp 15000");
 			System.out.println("2. Latte - Rp 22000");
@@ -62,24 +58,25 @@ public class caseMethod {
 			int jumlahMenu = new Scanner(System.in).nextInt();
 
 			if (menuKafe == 1) {
-				MenuPilihan[0] = Menu[menuKafe-1];
-				MenuTotalHarga[0] = 15000;
+				MenuPilihan[menuKafe-1] = Menu[menuKafe-1];
+				MenuTotalHarga = harga[menuKafe-1] * jumlahMenu;
+				TotalhargaMenu += MenuTotalHarga;
 			} else if (menuKafe == 2) {
-				MenuPilihan[0] = Menu[menuKafe-1];
-				MenuTotalHarga[0] = 22000;
+				MenuPilihan[menuKafe-1] = Menu[menuKafe-1];
+				MenuTotalHarga = harga[menuKafe-1] * jumlahMenu;
+				TotalhargaMenu += MenuTotalHarga;
+
 			} else if (menuKafe == 3) {
-				MenuPilihan[0] = Menu[menuKafe-1];
-				MenuTotalHarga[0] = 12000;
+				MenuPilihan[menuKafe-1] = Menu[menuKafe-1];
+				MenuTotalHarga = harga[menuKafe-1] * jumlahMenu;
+				TotalhargaMenu += MenuTotalHarga;
+
 			} else if (menuKafe == 4) {
-				MenuPilihan[0] = Menu[menuKafe-1];
-				MenuTotalHarga[0] = 18000;
+				MenuPilihan[menuKafe-1] = Menu[menuKafe-1];
+				MenuTotalHarga = harga[menuKafe-1] * jumlahMenu;
+				TotalhargaMenu += MenuTotalHarga;
+
 			}
-
-			
-			
 		}
-
-
-
 	}
 }
