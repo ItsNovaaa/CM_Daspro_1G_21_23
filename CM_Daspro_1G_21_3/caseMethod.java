@@ -94,19 +94,20 @@ public class caseMethod {
 	public static void tampilkanPesanan(double [][] dataPelanggan, int [] noMeja, String [] namaPelanggan, String [] Menu, int [] harga, double [] HargaTotalItem) {
 		for (int i = 0; i < 4; i++) {
 			if (namaPelanggan[i] != null) {
-				System.out.println("===== DAFTAR PESANAN =====");
-				System.out.print("Nama pelanggan: ");
-				System.out.println(namaPelanggan[i]);
-				System.out.print("Nomor meja: ");
-				System.out.println(noMeja[i]);
-				System.out.println("Total Pesanan: ");
-			}
-			for (int j = 0; j < 4; j++) {
-				if (dataPelanggan[i][j] != 0) {
-				System.out.print(Menu[j] + " - Rp " + harga[j] + "X" + (dataPelanggan[i][j] / harga[j]) + " = " + dataPelanggan[i][j]);
-				}
-			}
-			System.out.println("Total Pembelian = " + HargaTotalItem[i]);
+                System.out.println("===== DAFTAR PESANAN =====");
+                System.out.println("Nama pelanggan: " + namaPelanggan[i]);
+                System.out.println("Nomor meja: " + noMeja[i]);
+                System.out.println("Pesanan:");
+
+                for (int j = 0; j < Menu.length; j++) {
+                    if (dataPelanggan[i][j] != 0) {
+                        int jumlahItem = (int) (dataPelanggan[i][j] / harga[j]);
+                        System.out.println(Menu[j] + " - Rp " + harga[j] + " x " + jumlahItem + " = Rp " + dataPelanggan[i][j]);
+                    }
+                }
+                System.out.println("Total Pembelian = Rp " + HargaTotalItem[i]);
+                System.out.println();
+					}
 		}
 	}
 
