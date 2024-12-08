@@ -22,11 +22,13 @@ public class caseMethod {
                 System.out.println("3. Keluar");
                 System.out.print("Pilih menu: ");
                 menu = sc.nextInt();
-                System.out.print("Masukkan nomor meja: ");
-                noMeja[a] = sc.nextInt();
-                sc.nextLine();
-                System.out.print("Masukkan nama pelanggan: ");
-                namaPelanggan[a] = sc.nextLine();
+				if (menu == 1) {
+					System.out.print("Masukkan nomor meja: ");
+					noMeja[a] = sc.nextInt();
+					sc.nextLine();
+					System.out.print("Masukkan nama pelanggan: ");
+					namaPelanggan[a] = sc.nextLine();
+				}
                 switch (menu) {
                     case 1:
                         TambahPesanan(Menu,harga,a,dataPelanggan,HargaTotalItem);
