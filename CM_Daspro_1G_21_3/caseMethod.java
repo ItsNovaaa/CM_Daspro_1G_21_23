@@ -114,11 +114,7 @@ public class caseMethod {
                         System.out.println(Menu[j] + " - Rp " + harga[j] + " x " + jumlahItem + " = Rp " + dataPelanggan[i][j]);
                     }
                 }
-				double totalHarga = 0;
-				for(i = 0 ; i < HargaTotalItem.length;i++) {
-					totalHarga += HargaTotalItem[i];
-				}
-                System.out.println("Total Pembelian = Rp " + totalHarga);
+                System.out.println("Total Pembelian = Rp " + HargaTotalItem[i]);
                 System.out.println();
 					}
 		}
