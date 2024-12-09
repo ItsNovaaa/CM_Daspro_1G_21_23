@@ -22,7 +22,7 @@ public class caseMethod {
                 System.out.println("3. Keluar");
                 System.out.print("Pilih menu: ");
                 menu = sc.nextInt();
-				if (menu == 4) 	{
+				if (menu > 4) 	{
 					System.out.println("Yang Bener dong");
 					continue;
 				}
@@ -60,7 +60,7 @@ public class caseMethod {
 
 			System.out.print("Pilih menu (Masukkan no menu, atau 0 untuk selesai): ");
 			int menuKafe = new Scanner(System.in).nextInt();
-			if (menuKafe == 4) {
+			if (menuKafe > 4) {
 				System.out.println("Yang Bener dong");
 				continue;
 			}
