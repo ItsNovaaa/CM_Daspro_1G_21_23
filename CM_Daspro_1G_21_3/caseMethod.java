@@ -14,7 +14,7 @@ public class caseMethod {
 		String [] namaPelanggan = new String[10];
 		double []HargaTotalItem = new double[10];
 		int a = 0;
-            OUTER:
+
             while (true) {
                 System.out.println("===== Menu UTAMA =====");
                 System.out.println("1. Tambah Data");
@@ -38,8 +38,6 @@ public class caseMethod {
                         tampilkanPesanan(dataPelanggan,noMeja,namaPelanggan,Menu,harga,HargaTotalItem);
                         break;
                     case 3:
-                        break OUTER;
-                    default:
                         break;
                 }
             }
